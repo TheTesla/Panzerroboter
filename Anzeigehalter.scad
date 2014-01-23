@@ -1,7 +1,7 @@
 
 
-Dl = 54.5;
-Db = 10.5;
+Dl = 55;
+Db = 11;
 Dh = 48;
 
 Nl = 70;
@@ -13,6 +13,7 @@ NWb = 17;
 d = 1.5;
 
 Wb = 2.0;
+Wb2 = 12;
 Wr = 5;
 
 Ab = 19;
@@ -24,15 +25,15 @@ ly = 7;
 
 $fn = 50;
 
-module frame1(l, b, h, Wb, Wr, d)
+module frame1(l, b, h, Wb, Wb2, Wr, d)
 {
 	difference(){
 		cube([l+2*d,b+2*d,h+2*d]);
 		translate([d,d,d])#cube([l,b,h]);
 	
 		rotate([90,0,0])
-		translate([Wb+Wr+d,Wb+Wr+d,-4*d-b]){
-			minkowski(){
+		translate([Wb+Wr+d,Wb2+Wr+d,-4*d-b]){
+			#minkowski(){
 				cube([l-2*(Wb+Wr),max(l,b,h)+4*d+2*Wr,l+8*d]);
 				cylinder(r=Wr,h=1);
 			}
@@ -90,7 +91,7 @@ module frame2(l, b, h, Wl, Wb, Wr, d, rl, xl, yl)
 
 difference(){
 	union(){
-		frame1(Dl, Db, Dh, Wb, Wr, d);
+		frame1(Dl, Db, Dh, Wb, Wb2, Wr, d);
 		difference(){
 			translate([(Dl-Nl)/2,Db+d,0]) frame2(Nl, Nb, Nh, NWb, Wb, NWr, d, 1.7,5.5+d,15+d);
 			translate([(Dl-Nl)/2-d,+Db+Nb/2+3*d,-d]) cube([Nl+4*d,Nb+2*d,Nh+4*d]);
