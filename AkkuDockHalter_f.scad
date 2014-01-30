@@ -1,11 +1,11 @@
 
 
 Db = 9.0;
-Dh = 50;
+Dh = 10;
 
 Nl = 141;
 Nb = 20;
-Nh = 50;
+Nh = 19;
 NWr = 3;
 NWb = 19;
 
@@ -149,7 +149,7 @@ module frame2_mh(l, b, h, Wl, Wb, Wr, d, rl, xl, yl, xl2, yl2)
 	}
 }
 
-frame_asym(Dl, Db, Dh, Wb, Wr, d, 20+25.5);
+frame_asym(Dl, Db, Dh, Wb, Wr, d, 1);
 difference(){
 	translate([(Dl-Nl)/2,Db+d,0]) frame2_mh(Nl, Nb, Nh, NWb, Wb, NWr, d, 1.7,5.5+d,15+d,5.5+d,10+d);
 	translate([(Dl-Nl)/2-d,+Db+Nb/2+3*d,-d]) cube([Nl+4*d,Nb+2*d,Nh+4*d]);
