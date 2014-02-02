@@ -107,7 +107,7 @@ color([1,0,0]){
 			translate([sp+d*1.5,d,140-kd/2]) cube([lia,kh,kd]);
 			translate([sp+d*1.5,d+kh,140-kd/2-kkb]) cube([lia,kkd,kd+kkb]);
 		}
-		translate([ra/2+d,d+kh+1,140]) rotate([90,0,0]) #cylinder(r=krl,h=kh+2+kkb);
-		translate([lia+sp*2+d*2-ra/2,d+kh+1,140]) rotate([90,0,0]) #cylinder(r=krl,h=kh+2+kkb);
+		translate([ra/2+d,d+kh+1+kkd,140]) rotate([90,0,0]) #cylinder(r=krl,h=kh+2+kkd);
+		translate([lia+sp*2+d*2-ra/2,d+kh+1+kkd,140]) rotate([90,0,0]) #cylinder(r=krl,h=kh+2+kkd);
 	}
 }
