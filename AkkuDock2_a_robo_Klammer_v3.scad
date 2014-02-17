@@ -97,16 +97,21 @@ anglh = 20;
 }
 
 kd = 5;
-kh = 19.5;
+kh = 21.5;
 kkd = 2;
 kkb = 1.5;
 krl = 1.5;
+kkr = 13;
+kkh = 4;
 color([1,0,0]){
 	difference(){
 		union(){
-			translate([sp+d*1.5,d,140-kd/2]) cube([lia,kh,kd]);
-			translate([sp+d*1.5,d+kh,140-kd/2-kkb]) cube([lia,kkd,kd+kkb]);
+			translate([sp+d*1.5,d,140-kd/2-kkb]) cube([lia,kkd+kh,kd+kkb]);
+			translate([ra/2+d,d+kh+kkd,140]) rotate([90,0,0]) cylinder(r=kkr,h=kkh);
+			translate([lia+sp*2+d*2-ra/2,d+kh+kkd,140]) rotate([90,0,0]) cylinder(r=kkr,h=kkh);
 		}
+		translate([sp+d*1.5-1-kkr,d-1,140-kd/2-kkb-1-kkr]) #cube([lia+2+2*kkr,kh+1,kkb+1+kkr]);
+		translate([sp+d*1.5-1-kkr,d-1+kh,140-kd/2-kkb*2-1-kkr]) #cube([lia+2+2*kkr,kd+1,kkb+1+kkr]);
 		translate([ra/2+d,d+kh+1+kkd,140]) rotate([90,0,0]) #cylinder(r=krl,h=kh+2+kkd);
 		translate([lia+sp*2+d*2-ra/2,d+kh+1+kkd,140]) rotate([90,0,0]) #cylinder(r=krl,h=kh+2+kkd);
 	}
