@@ -1,23 +1,27 @@
 
 $fn = 50;
 
-hi = 38.5;
-bi = 55.5;
-li = 68;
 
-lmlp = 42;
+lblp = 2;
+
+hi = 38.5 *1;
+bi = 55.5;
+li = 66 + lblp;
+
+lmlp = 44 + lblp;
 rlm = 4.5;
 rlms = 1.7;
-amlm = -3;
+amlm = -2.7;
 
-d = 3;
+d = 3 *1;
+dm = 15;
 
-hgf = 9;
+hgf = 9 * 1;
 hlm = 17.5;
 bgfi = 25;
 
-lglp = 15 + lmlp;
-agl = 39;
+lglp = 16 + lmlp;
+agl = 42;
 rlgs = 1.7;
 rlg = 4;
 
@@ -25,9 +29,9 @@ lgnp = lglp - 24;
 gnr = 1.5;
 lgnh = 3;
 
-lanp = [lgnp - 13.5, lgnp + 4, lgnp + 4 + 10, lglp - 1.5];
-lan  = [9, 8, 6, 6];
-ban = [4, 3, 3, 3]; 
+lanp = [lgnp - 17.5, lgnp + 1, lgnp + 1 + 10, lglp - 1.5];
+lan  = [10, 8, 8, 8];
+ban = [3, 3, 3, 3]; 
 
 la = lanp[0]+lan[0]/2;
 ha = hgf + 8;
@@ -40,15 +44,15 @@ bllp = 5;
 hll = 20;
 rll = 1.5;
 
-lhbl = lllp - 12;
 ahbl = 84;
 hhbl = 22;
 rhbl = 1.5;
 rahbl = 4;
 
-lslp = lanp[0]-10;
-rsl = 20.5/2;
+lslp = lanp[0]-6;
+rsl = 19.85/2;
 angsl = 13;
+
 
 difference(){
 	union(){
@@ -73,7 +77,7 @@ difference(){
 
 	translate([-1,-1,-1]) cube([la+1,bi+2,ha]);
 	translate([-1,-1,-1]) cube([la2+1,bi+2,ha2+1]);
-	translate([lllp,bllp,-1]) cylinder(r=rll, h=hll+hgf+1);
+	translate([lllp,bi-bllp,-1]) #cylinder(r=rll, h=hll+hgf+1);
 
 	translate([rahbl,bi/2-(ahbl+2*rahbl)/2+rahbl,-1])# cylinder(r=rhbl,h=hhbl+hgf+hll+1);
 	translate([rahbl,bi/2+(ahbl+2*rahbl)/2-rahbl,-1])# cylinder(r=rhbl,h=hhbl+hgf+hll+1);
@@ -81,6 +85,6 @@ difference(){
 }
 
 difference(){
-	translate([lmlp,bi/2+amlm,hlm]) cylinder(r=rlm+1, h=d);
+	translate([lmlp,bi/2+amlm,hlm]) cylinder(r=rlm+1, h=dm);
 	translate([lmlp,bi/2+amlm,-1]) cylinder(r=rlms, h=hi+hgf+2);
 }
