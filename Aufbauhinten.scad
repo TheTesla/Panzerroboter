@@ -10,7 +10,7 @@ li = 66 + lblp;
 
 lmlp = 44 + lblp;
 rlm = 4.5;
-rlms = 1.7;
+rlms = 1.5;
 amlm = -2.7;
 
 d = 3 *1;
@@ -22,11 +22,11 @@ bgfi = 25;
 
 lglp = 16 + lmlp;
 agl = 42;
-rlgs = 1.7;
+rlgs = 2.1;
 rlg = 4;
 
 lgnp = lglp - 24;
-gnr = 1.5;
+gnr = 2.5;
 lgnh = 3;
 
 lanp = [lgnp - 17.5, lgnp + 1, lgnp + 1 + 10, lglp - 1.5];
@@ -54,6 +54,16 @@ rsl = 19.85/2;
 angsl = 13;
 
 
+xmhl = lglp;
+xmha = 19;
+xmhr = 1.5;
+xmht = 15;
+
+xmhl2 = lmlp;
+xmha2 = 30;
+xmhr2 = 1.5;
+xmht2 = 15;
+
 difference(){
 	union(){
 		translate([0,bi/2-bgfi/2,0]) cube([li,bgfi,hgf]);
@@ -79,9 +89,17 @@ difference(){
 	translate([-1,-1,-1]) cube([la2+1,bi+2,ha2+1]);
 	translate([lllp,bi-bllp,-1]) #cylinder(r=rll, h=hll+hgf+1);
 
-	translate([rahbl,bi/2-(ahbl+2*rahbl)/2+rahbl,-1])# cylinder(r=rhbl,h=hhbl+hgf+hll+1);
-	translate([rahbl,bi/2+(ahbl+2*rahbl)/2-rahbl,-1])# cylinder(r=rhbl,h=hhbl+hgf+hll+1);
+	translate([rahbl,bi/2-(ahbl+2*rahbl)/2+rahbl,-1]) #cylinder(r=rhbl,h=hhbl+hgf+hll+1);
+	translate([rahbl,bi/2+(ahbl+2*rahbl)/2-rahbl,-1]) #cylinder(r=rhbl,h=hhbl+hgf+hll+1);
 	rotate([0,angsl,0]) translate([lslp,bi/2,-1]) #cylinder(r=rsl,h=2*(hi+hgf+2)+1000);
+
+	translate([xmhl,bi/2+xmha/2,hi+hgf-xmht]) #cylinder(r=xmhr,h=xmht+1);
+	translate([xmhl,bi/2-xmha/2,hi+hgf-xmht]) #cylinder(r=xmhr,h=xmht+1);
+	translate([xmhl,bi/2,hi+hgf-xmht]) #cylinder(r=xmhr,h=xmht+1);
+
+	translate([xmhl2,bi/2+xmha2/2,hi+hgf-xmht2]) #cylinder(r=xmhr2,h=xmht2+1);
+	translate([xmhl2,bi/2-xmha2/2,hi+hgf-xmht2]) #cylinder(r=xmhr2,h=xmht2+1);
+
 }
 
 difference(){
