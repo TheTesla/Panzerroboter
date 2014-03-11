@@ -32,7 +32,8 @@ trup = 3;
 
 nma2 = 4;
 rma2 = 10;
-rkma2 = rc + d+1;
+echo(rc,d);
+rkma2 = rc + 4+1;
 rkmi2 = rkma2 +3.5;
 rmui2 = 1.5;
 
@@ -100,3 +101,7 @@ for(i=[1:nma2-1]){
 	}
 
 }
+
+
+echo(rkmi2);
+

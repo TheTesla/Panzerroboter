@@ -32,6 +32,7 @@ trup = 3;
 
 nma2 = 4;
 rma2 = 10;
+echo(rc, d);
 rkma2 = rc + d+1;
 rkmi2 = rkma2 +3.5;
 rmui2 = 1.5;
@@ -50,7 +51,6 @@ b = 20;
 
 anggap1 = 85;
 
-d = 4;
 d2 = d+4;
 
 Sr = 20/2+d;
@@ -129,8 +129,8 @@ difference(){
 		translate([0,-lh-b+bh/2,-hu-hh]) cylinder(r=bh/2,h=hh);
 		translate([0,rkma2,-hu-hh]) cylinder(r=bh/2,h=hh);
 	}
-	translate([0,rkmi2,-hu-hh]) cylinder(r=rmmi,h=hh);
-	translate([0,-rkmi2,-hu-hh]) cylinder(r=rmmi,h=hh);
+	translate([0,rkmi2,-hu-hh])# cylinder(r=rmmi,h=hh);
+	translate([0,-rkmi2,-hu-hh])# cylinder(r=rmmi,h=hh);
 }
 translate([d-bh/2,-lh,-hu-hh]) rotate([0,-angsl,90])translate([-Sr-b,0,0]){
 	difference(){
@@ -196,3 +196,5 @@ for(i=[1:nma2-1]){
 }
 }
 
+
+echo(rkmi2);
