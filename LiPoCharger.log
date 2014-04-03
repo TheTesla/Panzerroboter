@@ -1,0 +1,57 @@
+Circuit: * C:\Projekte\Panzerroboter\LiPoCharger.asc
+
+WARNING: Less than two connections to node NC_02.  This node is used by R:U2:1.
+WARNING: Less than two connections to node NC_04.  This node is used by V2.
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+Gmin = 0.000142725
+Gmin = 1.5325e-005
+Gmin = 1.6455e-006
+vernier = 0.5
+vernier = 0.25
+vernier = 0.125
+Gmin = 1.41214e-006
+vernier = 0.166667
+vernier = 0.222222
+Gmin = 9.32858e-007
+vernier = 0.296296
+Gmin = 4.89425e-007
+vernier = 0.395061
+vernier = 0.526748
+Gmin = 1.69571e-007
+vernier = 0.702331
+vernier = 0.936441
+Gmin = 3.2936e-008
+vernier = 1
+Gmin = 3.72216e-009
+Gmin = 3.99664e-010
+Gmin = 4.29136e-011
+Gmin = 4.60781e-012
+Gmin = 4.9476e-013
+Gmin = 0
+Gmin stepping succeeded in finding the operating point.
+
+
+Date: Fri Jan 17 23:35:54 2014
+Total elapsed time: 0.113 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 2952
+traniter = 2082
+tranpoints = 1042
+accept = 1042
+rejected = 0
+matrix size = 24
+fillins = 20
+solver = Normal
+Matrix Compiler1: 2,62 KB object code size  2.4/2.1/[1.7]
+Matrix Compiler2: 2,31 KB object code size  2.1/2.2/[2.2]
+
+
